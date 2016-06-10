@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ViewController" id="BYZ-38-t0r" customClass="ViewController" customModule="Googolplex" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -15,11 +16,407 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fRG-ga-Kie">
+                                <rect key="frame" x="248" y="64" width="104" height="37"/>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="19"/>
+                                <color key="tintColor" red="0.0" green="0.62745098040000002" blue="0.74509803919999995" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Googolplex"/>
+                                <connections>
+                                    <action selector="logoIsPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="pyc-Ma-a8t"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="-The definition of 600 million galaxies" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uVa-rb-VaQ">
+                                <rect key="frame" x="189" y="101" width="221.5" height="17"/>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="13"/>
+                                <color key="textColor" red="0.0" green="0.62745098040000002" blue="0.74509803919999995" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="tap me!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s7R-dq-ZGO">
+                                <rect key="frame" x="337" y="64" width="43" height="14.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <color key="textColor" red="0.84849759615384612" green="0.84849759615384612" blue="0.84849759615384612" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="GDu-gv-Piu">
+                                <rect key="frame" x="-25" y="-15" width="51" height="31"/>
+                                <color key="onTintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="thumbTintColor" red="0.0" green="0.62745098040000002" blue="0.74509803919999995" alpha="1" colorSpace="calibratedRGB"/>
+                                <connections>
+                                    <action selector="homescreenSwitchValueChange:" destination="BYZ-38-t0r" eventType="valueChanged" id="oMA-F5-Vgh"/>
+                                </connections>
+                            </switch>
+                        </subviews>
+                        <color key="backgroundColor" red="0.1176470588" green="0.12549019610000001" blue="0.15686274510000001" alpha="1" colorSpace="calibratedRGB"/>
+                        <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstItem="uVa-rb-VaQ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="GxH-J6-yGg"/>
+                            <constraint firstItem="fRG-ga-Kie" firstAttribute="top" secondItem="s7R-dq-ZGO" secondAttribute="bottom" constant="-15" id="b6L-eh-wfx"/>
+                            <constraint firstItem="fRG-ga-Kie" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="44" id="bbn-da-unQ"/>
+                            <constraint firstItem="uVa-rb-VaQ" firstAttribute="top" secondItem="fRG-ga-Kie" secondAttribute="bottom" id="gDV-cw-paL"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="GDu-gv-Piu" secondAttribute="bottom" constant="10" id="giz-zK-jiE"/>
+                            <constraint firstItem="fRG-ga-Kie" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="kH5-2X-zIW"/>
+                            <constraint firstItem="GDu-gv-Piu" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="php-9E-Evv"/>
+                            <constraint firstItem="s7R-dq-ZGO" firstAttribute="leading" secondItem="fRG-ga-Kie" secondAttribute="trailing" constant="-15" id="wJW-jV-tLj"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="GDu-gv-Piu"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="php-9E-Evv"/>
+                                <exclude reference="giz-zK-jiE"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular-widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="GDu-gv-Piu"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="php-9E-Evv"/>
+                                <include reference="giz-zK-jiE"/>
+                            </mask>
+                        </variation>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="NDa-E3-NTq" appends="YES" id="yrN-Xh-Vfv"/>
+                        </connections>
                     </view>
+                    <connections>
+                        <outlet property="blackOrWhiteSwitchOutlet" destination="GDu-gv-Piu" id="aoE-wB-vxh"/>
+                        <outlet property="tapMe" destination="s7R-dq-ZGO" id="gaA-Nc-o2t"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <swipeGestureRecognizer direction="right" id="NDa-E3-NTq">
+                    <connections>
+                        <action selector="homescreenSwipeRight:" destination="BYZ-38-t0r" id="CMQ-1Z-gLs"/>
+                    </connections>
+                </swipeGestureRecognizer>
             </objects>
+            <point key="canvasLocation" x="-738" y="151.5"/>
+        </scene>
+        <!--Calculator Controller-->
+        <scene sceneID="r2V-dN-cZF">
+            <objects>
+                <viewController id="fdF-I7-aVm" customClass="CalculatorController" customModule="Googolplex" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="SvN-k6-vDH"/>
+                        <viewControllerLayoutGuide type="bottom" id="6zp-fg-nAd"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="U1x-re-mM4">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Emr-qT-VWB">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="tintColor" red="0.0" green="0.62745098040000002" blue="0.74509803919999995" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="2"/>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="177" y="343" width="46" height="30"/>
+                                </variation>
+                                <connections>
+                                    <action selector="numberInputCalculator:" destination="fdF-I7-aVm" eventType="touchUpInside" id="Jle-RM-H7e"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N4d-d5-Z1f">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="tintColor" red="0.0" green="0.62745098040000002" blue="0.74509803919999995" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="5"/>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="177" y="407" width="46" height="30"/>
+                                </variation>
+                                <connections>
+                                    <action selector="numberInputCalculator:" destination="fdF-I7-aVm" eventType="touchUpInside" id="gQY-ri-1KF"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vUG-7b-6v3">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="tintColor" red="0.0" green="0.62745098040000002" blue="0.74509803919999995" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="8"/>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="177" y="470" width="46" height="30"/>
+                                </variation>
+                                <connections>
+                                    <action selector="numberInputCalculator:" destination="fdF-I7-aVm" eventType="touchUpInside" id="1o7-Kk-hxk"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vmX-nw-9EN">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="tintColor" red="0.0" green="0.62745098040000002" blue="0.74509803919999995" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="√"/>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="275" y="544" width="46" height="30"/>
+                                </variation>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QkA-HU-6Ak">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="tintColor" red="0.0" green="0.62745098040000002" blue="0.74509803919999995" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="3"/>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="275" y="343" width="46" height="30"/>
+                                </variation>
+                                <connections>
+                                    <action selector="numberInputCalculator:" destination="fdF-I7-aVm" eventType="touchUpInside" id="7Gj-9e-75P"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Tm-bc-K1a">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="tintColor" red="0.0" green="0.62745098040000002" blue="0.74509803919999995" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="6"/>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="275" y="407" width="46" height="30"/>
+                                </variation>
+                                <connections>
+                                    <action selector="numberInputCalculator:" destination="fdF-I7-aVm" eventType="touchUpInside" id="V7u-33-HfJ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="I7G-aB-O5q">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="tintColor" red="0.0" green="0.62745098040000002" blue="0.74509803919999995" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="9"/>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="275" y="470" width="46" height="30"/>
+                                </variation>
+                                <connections>
+                                    <action selector="numberInputCalculator:" destination="fdF-I7-aVm" eventType="touchUpInside" id="xYx-yj-5KF"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KiY-69-JHP">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="tintColor" red="0.0" green="0.62745098040000002" blue="0.74509803919999995" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="0"/>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="177" y="544" width="46" height="30"/>
+                                </variation>
+                                <connections>
+                                    <action selector="numberInputCalculator:" destination="fdF-I7-aVm" eventType="touchUpInside" id="YiL-Jd-umw"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Zr-oX-c1j">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="tintColor" red="0.0" green="0.62745098040000002" blue="0.74509803919999995" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="1"/>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="72" y="343" width="46" height="30"/>
+                                </variation>
+                                <connections>
+                                    <action selector="numberInputCalculator:" destination="fdF-I7-aVm" eventType="touchUpInside" id="xIH-3S-iDZ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JB4-JI-kmV">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="tintColor" red="0.0" green="0.62745098040000002" blue="0.74509803919999995" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="7"/>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="72" y="470" width="46" height="30"/>
+                                </variation>
+                                <connections>
+                                    <action selector="numberInputCalculator:" destination="fdF-I7-aVm" eventType="touchUpInside" id="as9-2l-Q2e"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0gX-er-k3M">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="tintColor" red="0.0" green="0.62745098040000002" blue="0.74509803919999995" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="π"/>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="72" y="544" width="46" height="30"/>
+                                </variation>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="g5g-Kx-Jz6">
+                                <rect key="frame" x="-25" y="-30" width="97" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="72" y="137" width="249" height="30"/>
+                                </variation>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XSh-Sz-0Jb">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="tintColor" red="0.0" green="0.62745098040000002" blue="0.74509803919999995" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="4"/>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="72" y="407" width="46" height="30"/>
+                                </variation>
+                                <connections>
+                                    <action selector="numberInputCalculator:" destination="fdF-I7-aVm" eventType="touchUpInside" id="bsB-W7-mJA"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0" green="0.62745098040000002" blue="0.74509803919999995" alpha="1" colorSpace="calibratedRGB"/>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="Emr-qT-VWB"/>
+                                <exclude reference="N4d-d5-Z1f"/>
+                                <exclude reference="vUG-7b-6v3"/>
+                                <exclude reference="vmX-nw-9EN"/>
+                                <exclude reference="QkA-HU-6Ak"/>
+                                <exclude reference="8Tm-bc-K1a"/>
+                                <exclude reference="I7G-aB-O5q"/>
+                                <exclude reference="KiY-69-JHP"/>
+                                <exclude reference="9Zr-oX-c1j"/>
+                                <exclude reference="JB4-JI-kmV"/>
+                                <exclude reference="0gX-er-k3M"/>
+                                <exclude reference="g5g-Kx-Jz6"/>
+                                <exclude reference="XSh-Sz-0Jb"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular-widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="Emr-qT-VWB"/>
+                                <include reference="N4d-d5-Z1f"/>
+                                <include reference="vUG-7b-6v3"/>
+                                <include reference="vmX-nw-9EN"/>
+                                <include reference="QkA-HU-6Ak"/>
+                                <include reference="8Tm-bc-K1a"/>
+                                <include reference="I7G-aB-O5q"/>
+                                <include reference="KiY-69-JHP"/>
+                                <include reference="9Zr-oX-c1j"/>
+                                <include reference="JB4-JI-kmV"/>
+                                <include reference="0gX-er-k3M"/>
+                                <include reference="g5g-Kx-Jz6"/>
+                                <include reference="XSh-Sz-0Jb"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <connections>
+                        <outlet property="displayInput" destination="g5g-Kx-Jz6" id="GFv-2h-aGh"/>
+                        <outletCollection property="numberInputCollection" destination="KiY-69-JHP" collectionClass="NSMutableArray" id="Nln-i4-Vly"/>
+                        <outletCollection property="numberInputCollection" destination="vUG-7b-6v3" collectionClass="NSMutableArray" id="lCJ-GY-MNA"/>
+                        <outletCollection property="numberInputCollection" destination="I7G-aB-O5q" collectionClass="NSMutableArray" id="3ci-Vt-W6B"/>
+                        <outletCollection property="numberInputCollection" destination="8Tm-bc-K1a" collectionClass="NSMutableArray" id="ZTN-zO-NoT"/>
+                        <outletCollection property="numberInputCollection" destination="QkA-HU-6Ak" collectionClass="NSMutableArray" id="tMH-Ru-E1n"/>
+                        <outletCollection property="numberInputCollection" destination="Emr-qT-VWB" collectionClass="NSMutableArray" id="4eB-ys-Tgw"/>
+                        <outletCollection property="numberInputCollection" destination="N4d-d5-Z1f" collectionClass="NSMutableArray" id="KRd-4f-wJP"/>
+                        <outletCollection property="numberInputCollection" destination="JB4-JI-kmV" collectionClass="NSMutableArray" id="USA-Gc-0YE"/>
+                        <outletCollection property="numberInputCollection" destination="XSh-Sz-0Jb" collectionClass="NSMutableArray" id="LsC-A7-tfF"/>
+                        <outletCollection property="numberInputCollection" destination="9Zr-oX-c1j" collectionClass="NSMutableArray" id="IXi-Tr-Pc7"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Xwd-r0-PAm" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2589" y="167.25"/>
+        </scene>
+        <!--Prestige Game Mode Controller-->
+        <scene sceneID="2zF-LQ-0Qm">
+            <objects>
+                <viewController storyboardIdentifier="PrestigeGameModeController" id="9At-YY-w0G" customClass="PrestigeGameModeController" customModule="Googolplex" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="p16-zu-7rG"/>
+                        <viewControllerLayoutGuide type="bottom" id="BaH-Ob-4G9"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="F2Q-lG-Vyg">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="CarLoop(noBck)" translatesAutoresizingMaskIntoConstraints="NO" id="jKo-ev-i7i">
+                                <rect key="frame" x="115" y="30" width="370" height="283"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0" green="0.62745098040000002" blue="0.74509803919999995" alpha="1" colorSpace="calibratedRGB"/>
+                        <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstItem="jKo-ev-i7i" firstAttribute="top" secondItem="p16-zu-7rG" secondAttribute="bottom" constant="10" id="Bi5-Pi-e9V"/>
+                            <constraint firstItem="jKo-ev-i7i" firstAttribute="centerX" secondItem="F2Q-lG-Vyg" secondAttribute="centerX" id="sRu-ma-i7v"/>
+                        </constraints>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="JOm-eS-7pa" appends="YES" id="Dgy-G2-eFn"/>
+                        </connections>
+                    </view>
+                    <connections>
+                        <outlet property="challangeTopImageView" destination="jKo-ev-i7i" id="BN5-Qb-31u"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9xU-n8-dEF" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <swipeGestureRecognizer direction="left" id="JOm-eS-7pa">
+                    <connections>
+                        <action selector="prestigeSwipeLeft:" destination="9At-YY-w0G" id="TMh-Il-kiI"/>
+                    </connections>
+                </swipeGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="-1486.5" y="151.5"/>
+        </scene>
+        <!--Logo Info Controller-->
+        <scene sceneID="86P-yJ-1F7">
+            <objects>
+                <viewController storyboardIdentifier="LogoInfoController" id="XTs-aR-1Ir" customClass="LogoInfoController" customModule="Googolplex" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Rum-nN-5om"/>
+                        <viewControllerLayoutGuide type="bottom" id="rSi-Tj-MrI"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="5ZR-H8-oXx">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wvC-Mr-8SO">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fhk-8V-5QE">
+                                        <rect key="frame" x="248" y="64" width="104" height="37"/>
+                                        <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="19"/>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <state key="normal" title="Googolplex"/>
+                                        <connections>
+                                            <action selector="logoIsPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Ix9-YH-rAT"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="-The definition of 600 million galaxies" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XD2-1O-hdS">
+                                        <rect key="frame" x="189.5" y="101" width="221.5" height="17"/>
+                                        <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="13"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.1176470588" green="0.12549019610000001" blue="0.15686274510000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <gestureRecognizers/>
+                                <constraints>
+                                    <constraint firstItem="Fhk-8V-5QE" firstAttribute="top" secondItem="wvC-Mr-8SO" secondAttribute="top" constant="64" id="HyC-Cd-OtR"/>
+                                    <constraint firstItem="XD2-1O-hdS" firstAttribute="top" secondItem="Fhk-8V-5QE" secondAttribute="bottom" id="TUB-pw-N3o"/>
+                                    <constraint firstItem="Fhk-8V-5QE" firstAttribute="top" secondItem="wvC-Mr-8SO" secondAttribute="top" constant="64" id="WBj-Yr-Kkc"/>
+                                    <constraint firstItem="Fhk-8V-5QE" firstAttribute="centerX" secondItem="wvC-Mr-8SO" secondAttribute="centerX" id="eUR-dp-ixe"/>
+                                    <constraint firstItem="XD2-1O-hdS" firstAttribute="centerX" secondItem="wvC-Mr-8SO" secondAttribute="centerX" id="uDO-M4-XVe"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="WBj-Yr-Kkc"/>
+                                    </mask>
+                                </variation>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="rSi-Tj-MrI" firstAttribute="top" secondItem="wvC-Mr-8SO" secondAttribute="bottom" id="JO9-2y-wsp"/>
+                            <constraint firstItem="wvC-Mr-8SO" firstAttribute="leading" secondItem="5ZR-H8-oXx" secondAttribute="leading" id="Mvc-pC-HjW"/>
+                            <constraint firstItem="wvC-Mr-8SO" firstAttribute="top" secondItem="5ZR-H8-oXx" secondAttribute="top" id="O9X-tP-4Dc"/>
+                            <constraint firstAttribute="trailing" secondItem="wvC-Mr-8SO" secondAttribute="trailing" id="jrf-1S-qff"/>
+                        </constraints>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="BL0-PU-gtL" appends="YES" id="YjN-yp-kWh"/>
+                        </connections>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jR3-qc-OCm" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="BL0-PU-gtL">
+                    <connections>
+                        <action selector="logoInfoHomescreenWasTapped:" destination="XTs-aR-1Ir" id="nsg-tu-b9z"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="-738" y="-731"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="CarLoop(noBck)" width="370" height="283"/>
+    </resources>
 </document>

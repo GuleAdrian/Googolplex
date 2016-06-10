@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3AA1E6911D08495D00CD55A3 /* LogoInfoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AA1E6901D08495D00CD55A3 /* LogoInfoController.swift */; };
+		3AA1E6941D084ACD00CD55A3 /* DismissFadeAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AA1E6931D084ACD00CD55A3 /* DismissFadeAnimator.swift */; };
+		3AA1E6971D08692800CD55A3 /* PresentFadeAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AA1E6961D08692800CD55A3 /* PresentFadeAnimator.swift */; };
+		3AA1E6991D08750200CD55A3 /* PrestigeGameModeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AA1E6981D08750200CD55A3 /* PrestigeGameModeController.swift */; };
+		3AA1E69B1D0886AA00CD55A3 /* SlideFromLeftAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AA1E69A1D0886AA00CD55A3 /* SlideFromLeftAnimator.swift */; };
+		3AA1E69D1D09901A00CD55A3 /* SlideFromRightAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AA1E69C1D09901A00CD55A3 /* SlideFromRightAnimator.swift */; };
+		3AA1E69F1D0ADAAB00CD55A3 /* CalculatorController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AA1E69E1D0ADAAB00CD55A3 /* CalculatorController.swift */; };
 		3AD9A7181D06F7BA009BAE18 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AD9A7171D06F7BA009BAE18 /* AppDelegate.swift */; };
 		3AD9A71A1D06F7BA009BAE18 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AD9A7191D06F7BA009BAE18 /* ViewController.swift */; };
 		3AD9A71D1D06F7BA009BAE18 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3AD9A71B1D06F7BA009BAE18 /* Main.storyboard */; };
@@ -35,9 +42,16 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3AA1E6901D08495D00CD55A3 /* LogoInfoController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LogoInfoController.swift; path = ../LogoInfoController.swift; sourceTree = "<group>"; };
+		3AA1E6931D084ACD00CD55A3 /* DismissFadeAnimator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DismissFadeAnimator.swift; path = ../DismissFadeAnimator.swift; sourceTree = "<group>"; };
+		3AA1E6961D08692800CD55A3 /* PresentFadeAnimator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PresentFadeAnimator.swift; path = ../PresentFadeAnimator.swift; sourceTree = "<group>"; usesTabs = 1; };
+		3AA1E6981D08750200CD55A3 /* PrestigeGameModeController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PrestigeGameModeController.swift; path = ../PrestigeGameModeController.swift; sourceTree = "<group>"; };
+		3AA1E69A1D0886AA00CD55A3 /* SlideFromLeftAnimator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SlideFromLeftAnimator.swift; path = ../SlideFromLeftAnimator.swift; sourceTree = "<group>"; };
+		3AA1E69C1D09901A00CD55A3 /* SlideFromRightAnimator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SlideFromRightAnimator.swift; path = ../SlideFromRightAnimator.swift; sourceTree = "<group>"; };
+		3AA1E69E1D0ADAAB00CD55A3 /* CalculatorController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalculatorController.swift; sourceTree = "<group>"; };
 		3AD9A7141D06F7BA009BAE18 /* Googolplex.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Googolplex.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3AD9A7171D06F7BA009BAE18 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		3AD9A7191D06F7BA009BAE18 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		3AD9A7191D06F7BA009BAE18 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; usesTabs = 0; };
 		3AD9A71C1D06F7BA009BAE18 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		3AD9A71F1D06F7BA009BAE18 /* Googolplex.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Googolplex.xcdatamodel; sourceTree = "<group>"; };
 		3AD9A7211D06F7BA009BAE18 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -76,9 +90,33 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3AA1E6921D084A5D00CD55A3 /* Extras */ = {
+			isa = PBXGroup;
+			children = (
+				3AD9A7171D06F7BA009BAE18 /* AppDelegate.swift */,
+				3AD9A7211D06F7BA009BAE18 /* Assets.xcassets */,
+				3AD9A7231D06F7BA009BAE18 /* LaunchScreen.storyboard */,
+				3AD9A7261D06F7BA009BAE18 /* Info.plist */,
+				3AD9A71E1D06F7BA009BAE18 /* Googolplex.xcdatamodeld */,
+			);
+			name = Extras;
+			sourceTree = "<group>";
+		};
+		3AA1E6951D0868E900CD55A3 /* Transition Animations */ = {
+			isa = PBXGroup;
+			children = (
+				3AA1E6961D08692800CD55A3 /* PresentFadeAnimator.swift */,
+				3AA1E6931D084ACD00CD55A3 /* DismissFadeAnimator.swift */,
+				3AA1E69C1D09901A00CD55A3 /* SlideFromRightAnimator.swift */,
+				3AA1E69A1D0886AA00CD55A3 /* SlideFromLeftAnimator.swift */,
+			);
+			name = "Transition Animations";
+			sourceTree = "<group>";
+		};
 		3AD9A70B1D06F7BA009BAE18 = {
 			isa = PBXGroup;
 			children = (
+				3AA1E69E1D0ADAAB00CD55A3 /* CalculatorController.swift */,
 				3AD9A7161D06F7BA009BAE18 /* Googolplex */,
 				3AD9A72E1D06F7BB009BAE18 /* GoogolplexTests */,
 				3AD9A7391D06F7BB009BAE18 /* GoogolplexUITests */,
@@ -99,13 +137,12 @@
 		3AD9A7161D06F7BA009BAE18 /* Googolplex */ = {
 			isa = PBXGroup;
 			children = (
-				3AD9A7171D06F7BA009BAE18 /* AppDelegate.swift */,
+				3AA1E6951D0868E900CD55A3 /* Transition Animations */,
 				3AD9A7191D06F7BA009BAE18 /* ViewController.swift */,
+				3AA1E6981D08750200CD55A3 /* PrestigeGameModeController.swift */,
 				3AD9A71B1D06F7BA009BAE18 /* Main.storyboard */,
-				3AD9A7211D06F7BA009BAE18 /* Assets.xcassets */,
-				3AD9A7231D06F7BA009BAE18 /* LaunchScreen.storyboard */,
-				3AD9A7261D06F7BA009BAE18 /* Info.plist */,
-				3AD9A71E1D06F7BA009BAE18 /* Googolplex.xcdatamodeld */,
+				3AA1E6901D08495D00CD55A3 /* LogoInfoController.swift */,
+				3AA1E6921D084A5D00CD55A3 /* Extras */,
 			);
 			path = Googolplex;
 			sourceTree = "<group>";
@@ -259,9 +296,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3AA1E6941D084ACD00CD55A3 /* DismissFadeAnimator.swift in Sources */,
+				3AA1E69B1D0886AA00CD55A3 /* SlideFromLeftAnimator.swift in Sources */,
+				3AA1E6911D08495D00CD55A3 /* LogoInfoController.swift in Sources */,
 				3AD9A71A1D06F7BA009BAE18 /* ViewController.swift in Sources */,
 				3AD9A7181D06F7BA009BAE18 /* AppDelegate.swift in Sources */,
+				3AA1E6991D08750200CD55A3 /* PrestigeGameModeController.swift in Sources */,
+				3AA1E6971D08692800CD55A3 /* PresentFadeAnimator.swift in Sources */,
+				3AA1E69F1D0ADAAB00CD55A3 /* CalculatorController.swift in Sources */,
 				3AD9A7201D06F7BA009BAE18 /* Googolplex.xcdatamodeld in Sources */,
+				3AA1E69D1D09901A00CD55A3 /* SlideFromRightAnimator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -404,6 +448,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Googolplex/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.Adrian.Googolplex;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -415,6 +460,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Googolplex/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.Adrian.Googolplex;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -486,6 +532,7 @@
 				3AD9A7411D06F7BB009BAE18 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		3AD9A7421D06F7BB009BAE18 /* Build configuration list for PBXNativeTarget "GoogolplexTests" */ = {
 			isa = XCConfigurationList;
@@ -494,6 +541,7 @@
 				3AD9A7441D06F7BB009BAE18 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		3AD9A7451D06F7BB009BAE18 /* Build configuration list for PBXNativeTarget "GoogolplexUITests" */ = {
 			isa = XCConfigurationList;
@@ -502,6 +550,7 @@
 				3AD9A7471D06F7BB009BAE18 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
