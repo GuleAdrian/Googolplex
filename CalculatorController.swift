@@ -85,8 +85,10 @@ class CalculatorController: UIViewController {
         
         if sender.currentTitle == "+" {
             operatorPluss = true
+            operatorMinus = false
         } else {
             operatorMinus = true
+            operatorPluss = false
         }
         
         sender.tintColor = UIColor.whiteColor()
@@ -108,6 +110,10 @@ class CalculatorController: UIViewController {
             answer = firstDigit + secondDigit
         }
         calculatorDisplay.text = String(answer)
+            operatorMinus = false
+            operatorPluss = false
+            firstDigit = 0
+            secondDigit = 0
         }}
     
     
