@@ -48,7 +48,7 @@
 		3AA1E6981D08750200CD55A3 /* PrestigeGameModeController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PrestigeGameModeController.swift; path = ../PrestigeGameModeController.swift; sourceTree = "<group>"; };
 		3AA1E69A1D0886AA00CD55A3 /* SlideFromLeftAnimator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SlideFromLeftAnimator.swift; path = ../SlideFromLeftAnimator.swift; sourceTree = "<group>"; };
 		3AA1E69C1D09901A00CD55A3 /* SlideFromRightAnimator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SlideFromRightAnimator.swift; path = ../SlideFromRightAnimator.swift; sourceTree = "<group>"; };
-		3AA1E69E1D0ADAAB00CD55A3 /* CalculatorController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalculatorController.swift; sourceTree = "<group>"; };
+		3AA1E69E1D0ADAAB00CD55A3 /* CalculatorController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CalculatorController.swift; path = ../CalculatorController.swift; sourceTree = "<group>"; };
 		3AD9A7141D06F7BA009BAE18 /* Googolplex.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Googolplex.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3AD9A7171D06F7BA009BAE18 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3AD9A7191D06F7BA009BAE18 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; usesTabs = 0; };
@@ -116,7 +116,6 @@
 		3AD9A70B1D06F7BA009BAE18 = {
 			isa = PBXGroup;
 			children = (
-				3AA1E69E1D0ADAAB00CD55A3 /* CalculatorController.swift */,
 				3AD9A7161D06F7BA009BAE18 /* Googolplex */,
 				3AD9A72E1D06F7BB009BAE18 /* GoogolplexTests */,
 				3AD9A7391D06F7BB009BAE18 /* GoogolplexUITests */,
@@ -142,6 +141,7 @@
 				3AA1E6981D08750200CD55A3 /* PrestigeGameModeController.swift */,
 				3AD9A71B1D06F7BA009BAE18 /* Main.storyboard */,
 				3AA1E6901D08495D00CD55A3 /* LogoInfoController.swift */,
+				3AA1E69E1D0ADAAB00CD55A3 /* CalculatorController.swift */,
 				3AA1E6921D084A5D00CD55A3 /* Extras */,
 			);
 			path = Googolplex;
@@ -233,6 +233,11 @@
 				TargetAttributes = {
 					3AD9A7131D06F7BA009BAE18 = {
 						CreatedOnToolsVersion = 7.3.1;
+						SystemCapabilities = {
+							com.apple.Maps.iOS = {
+								enabled = 0;
+							};
+						};
 					};
 					3AD9A72A1D06F7BB009BAE18 = {
 						CreatedOnToolsVersion = 7.3.1;
@@ -448,7 +453,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Googolplex/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.Adrian.Googolplex;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -460,7 +465,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Googolplex/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.Adrian.Googolplex;
 				PRODUCT_NAME = "$(TARGET_NAME)";

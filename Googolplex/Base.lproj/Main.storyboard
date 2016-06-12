@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -26,12 +27,6 @@
                                     <action selector="logoIsPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="pyc-Ma-a8t"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="-The definition of 600 million galaxies" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uVa-rb-VaQ">
-                                <rect key="frame" x="189" y="101" width="221.5" height="17"/>
-                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="13"/>
-                                <color key="textColor" red="0.0" green="0.62745098040000002" blue="0.74509803919999995" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="tap me!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s7R-dq-ZGO">
                                 <rect key="frame" x="337" y="64" width="43" height="14.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
@@ -40,20 +35,30 @@
                             </label>
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="GDu-gv-Piu">
                                 <rect key="frame" x="-25" y="-15" width="51" height="31"/>
-                                <color key="onTintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <color key="thumbTintColor" red="0.0" green="0.62745098040000002" blue="0.74509803919999995" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="onTintColor" red="0.18859182555397591" green="0.20318574538209255" blue="0.25368589743589742" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="thumbTintColor" red="0.1176470588" green="0.12549019610000001" blue="0.15686274510000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <connections>
                                     <action selector="homescreenSwitchValueChange:" destination="BYZ-38-t0r" eventType="valueChanged" id="oMA-F5-Vgh"/>
                                 </connections>
                             </switch>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="// The definition of infinity" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uVa-rb-VaQ">
+                                <rect key="frame" x="189" y="101" width="221.5" height="17"/>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="13"/>
+                                <color key="textColor" red="0.25490196079999999" green="0.71764705880000002" blue="0.2666666667" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.1176470588" green="0.12549019610000001" blue="0.15686274510000001" alpha="1" colorSpace="calibratedRGB"/>
                         <gestureRecognizers/>
                         <constraints>
-                            <constraint firstItem="uVa-rb-VaQ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="GxH-J6-yGg"/>
+                            <constraint firstItem="uVa-rb-VaQ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="GxH-J6-yGg">
+                                <variation key="heightClass=regular-widthClass=compact" constant="30"/>
+                            </constraint>
                             <constraint firstItem="fRG-ga-Kie" firstAttribute="top" secondItem="s7R-dq-ZGO" secondAttribute="bottom" constant="-15" id="b6L-eh-wfx"/>
                             <constraint firstItem="fRG-ga-Kie" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="44" id="bbn-da-unQ"/>
-                            <constraint firstItem="uVa-rb-VaQ" firstAttribute="top" secondItem="fRG-ga-Kie" secondAttribute="bottom" id="gDV-cw-paL"/>
+                            <constraint firstItem="uVa-rb-VaQ" firstAttribute="top" secondItem="fRG-ga-Kie" secondAttribute="bottom" constant="-10" id="gDV-cw-paL">
+                                <variation key="heightClass=regular-widthClass=compact" constant="-7"/>
+                            </constraint>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="GDu-gv-Piu" secondAttribute="bottom" constant="10" id="giz-zK-jiE"/>
                             <constraint firstItem="fRG-ga-Kie" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="kH5-2X-zIW"/>
                             <constraint firstItem="GDu-gv-Piu" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="php-9E-Evv"/>
@@ -98,7 +103,7 @@
         <!--Calculator Controller-->
         <scene sceneID="r2V-dN-cZF">
             <objects>
-                <viewController id="fdF-I7-aVm" customClass="CalculatorController" customModule="Googolplex" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="CalculatorController" id="fdF-I7-aVm" customClass="CalculatorController" customModule="Googolplex" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="SvN-k6-vDH"/>
                         <viewControllerLayoutGuide type="bottom" id="6zp-fg-nAd"/>
@@ -107,206 +112,465 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Emr-qT-VWB">
-                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <color key="tintColor" red="0.0" green="0.62745098040000002" blue="0.74509803919999995" alpha="1" colorSpace="calibratedRGB"/>
-                                <state key="normal" title="2"/>
-                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="177" y="343" width="46" height="30"/>
-                                </variation>
-                                <connections>
-                                    <action selector="numberInputCalculator:" destination="fdF-I7-aVm" eventType="touchUpInside" id="Jle-RM-H7e"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N4d-d5-Z1f">
-                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <color key="tintColor" red="0.0" green="0.62745098040000002" blue="0.74509803919999995" alpha="1" colorSpace="calibratedRGB"/>
-                                <state key="normal" title="5"/>
-                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="177" y="407" width="46" height="30"/>
-                                </variation>
-                                <connections>
-                                    <action selector="numberInputCalculator:" destination="fdF-I7-aVm" eventType="touchUpInside" id="gQY-ri-1KF"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vUG-7b-6v3">
-                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <color key="tintColor" red="0.0" green="0.62745098040000002" blue="0.74509803919999995" alpha="1" colorSpace="calibratedRGB"/>
-                                <state key="normal" title="8"/>
-                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="177" y="470" width="46" height="30"/>
-                                </variation>
-                                <connections>
-                                    <action selector="numberInputCalculator:" destination="fdF-I7-aVm" eventType="touchUpInside" id="1o7-Kk-hxk"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vmX-nw-9EN">
-                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <color key="tintColor" red="0.0" green="0.62745098040000002" blue="0.74509803919999995" alpha="1" colorSpace="calibratedRGB"/>
-                                <state key="normal" title="√"/>
-                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="275" y="544" width="46" height="30"/>
-                                </variation>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QkA-HU-6Ak">
-                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <color key="tintColor" red="0.0" green="0.62745098040000002" blue="0.74509803919999995" alpha="1" colorSpace="calibratedRGB"/>
-                                <state key="normal" title="3"/>
-                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="275" y="343" width="46" height="30"/>
-                                </variation>
-                                <connections>
-                                    <action selector="numberInputCalculator:" destination="fdF-I7-aVm" eventType="touchUpInside" id="7Gj-9e-75P"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Tm-bc-K1a">
-                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <color key="tintColor" red="0.0" green="0.62745098040000002" blue="0.74509803919999995" alpha="1" colorSpace="calibratedRGB"/>
-                                <state key="normal" title="6"/>
-                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="275" y="407" width="46" height="30"/>
-                                </variation>
-                                <connections>
-                                    <action selector="numberInputCalculator:" destination="fdF-I7-aVm" eventType="touchUpInside" id="V7u-33-HfJ"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="I7G-aB-O5q">
-                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <color key="tintColor" red="0.0" green="0.62745098040000002" blue="0.74509803919999995" alpha="1" colorSpace="calibratedRGB"/>
-                                <state key="normal" title="9"/>
-                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="275" y="470" width="46" height="30"/>
-                                </variation>
-                                <connections>
-                                    <action selector="numberInputCalculator:" destination="fdF-I7-aVm" eventType="touchUpInside" id="xYx-yj-5KF"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KiY-69-JHP">
-                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <color key="tintColor" red="0.0" green="0.62745098040000002" blue="0.74509803919999995" alpha="1" colorSpace="calibratedRGB"/>
-                                <state key="normal" title="0"/>
-                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="177" y="544" width="46" height="30"/>
-                                </variation>
-                                <connections>
-                                    <action selector="numberInputCalculator:" destination="fdF-I7-aVm" eventType="touchUpInside" id="YiL-Jd-umw"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Zr-oX-c1j">
-                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <color key="tintColor" red="0.0" green="0.62745098040000002" blue="0.74509803919999995" alpha="1" colorSpace="calibratedRGB"/>
-                                <state key="normal" title="1"/>
-                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="72" y="343" width="46" height="30"/>
-                                </variation>
-                                <connections>
-                                    <action selector="numberInputCalculator:" destination="fdF-I7-aVm" eventType="touchUpInside" id="xIH-3S-iDZ"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JB4-JI-kmV">
-                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <color key="tintColor" red="0.0" green="0.62745098040000002" blue="0.74509803919999995" alpha="1" colorSpace="calibratedRGB"/>
-                                <state key="normal" title="7"/>
-                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="72" y="470" width="46" height="30"/>
-                                </variation>
-                                <connections>
-                                    <action selector="numberInputCalculator:" destination="fdF-I7-aVm" eventType="touchUpInside" id="as9-2l-Q2e"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0gX-er-k3M">
-                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <color key="tintColor" red="0.0" green="0.62745098040000002" blue="0.74509803919999995" alpha="1" colorSpace="calibratedRGB"/>
-                                <state key="normal" title="π"/>
-                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="72" y="544" width="46" height="30"/>
-                                </variation>
-                            </button>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="g5g-Kx-Jz6">
+                            <textField opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="0" textAlignment="right" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="g5g-Kx-Jz6">
                                 <rect key="frame" x="-25" y="-30" width="97" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="backgroundColor" red="0.21527822411625677" green="0.23193723430539559" blue="0.2895833333333333" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="43"/>
                                 <textInputTraits key="textInputTraits"/>
-                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="72" y="137" width="249" height="30"/>
-                                </variation>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XSh-Sz-0Jb">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="moU-jG-ui3">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <color key="tintColor" red="0.0" green="0.62745098040000002" blue="0.74509803919999995" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.24985123134124188" green="0.2691856262888464" blue="0.33608950792051284" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="27"/>
+                                <color key="tintColor" red="0.1176470588" green="0.12549019610000001" blue="0.15686274510000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="4"/>
-                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="72" y="407" width="46" height="30"/>
-                                </variation>
                                 <connections>
-                                    <action selector="numberInputCalculator:" destination="fdF-I7-aVm" eventType="touchUpInside" id="bsB-W7-mJA"/>
+                                    <action selector="touchDigit:" destination="fdF-I7-aVm" eventType="touchUpInside" id="Jw9-Lh-IlC"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hha-LJ-ZdH">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <color key="backgroundColor" red="0.24985123134124188" green="0.2691856262888464" blue="0.33608950792051284" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="27"/>
+                                <color key="tintColor" red="0.1176470588" green="0.12549019610000001" blue="0.15686274510000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="7"/>
+                                <connections>
+                                    <action selector="touchDigit:" destination="fdF-I7-aVm" eventType="touchUpInside" id="y7f-e3-YG6"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iKD-Qw-R6f">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <color key="backgroundColor" red="0.24985123134124188" green="0.2691856262888464" blue="0.33608950792051284" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="27"/>
+                                <color key="tintColor" red="0.1176470588" green="0.12549019610000001" blue="0.15686274510000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="9"/>
+                                <connections>
+                                    <action selector="touchDigit:" destination="fdF-I7-aVm" eventType="touchUpInside" id="LPy-cE-roh"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8a7-KS-bgM">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <color key="backgroundColor" red="0.24985123134124188" green="0.2691856262888464" blue="0.33608950792051284" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="27"/>
+                                <color key="tintColor" red="0.1176470588" green="0.12549019610000001" blue="0.15686274510000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="3"/>
+                                <connections>
+                                    <action selector="touchDigit:" destination="fdF-I7-aVm" eventType="touchUpInside" id="Fqy-7O-RTe"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="characterWrap" translatesAutoresizingMaskIntoConstraints="NO" id="hGz-Jq-1sl">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <color key="backgroundColor" red="0.24985123134124188" green="0.2691856262888464" blue="0.33608950792051284" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="27"/>
+                                <color key="tintColor" red="0.1176470588" green="0.12549019610000001" blue="0.15686274510000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="1"/>
+                                <connections>
+                                    <action selector="touchDigit:" destination="fdF-I7-aVm" eventType="touchUpInside" id="1aB-sv-6h9"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PlL-go-me4">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <color key="backgroundColor" red="0.24985123134124188" green="0.2691856262888464" blue="0.33608950792051284" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="27"/>
+                                <color key="tintColor" red="0.1176470588" green="0.12549019610000001" blue="0.15686274510000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="2"/>
+                                <connections>
+                                    <action selector="touchDigit:" destination="fdF-I7-aVm" eventType="touchUpInside" id="hZL-uY-AYi"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Q4W-21-hBi">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <color key="backgroundColor" red="0.24985123134124188" green="0.2691856262888464" blue="0.33608950792051284" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="27"/>
+                                <color key="tintColor" red="0.1176470588" green="0.12549019610000001" blue="0.15686274510000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="5"/>
+                                <connections>
+                                    <action selector="touchDigit:" destination="fdF-I7-aVm" eventType="touchUpInside" id="h1P-wC-0X7"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xUk-9G-Jd6">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <color key="backgroundColor" red="0.24985123134124188" green="0.2691856262888464" blue="0.33608950792051284" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="27"/>
+                                <color key="tintColor" red="0.1176470588" green="0.12549019610000001" blue="0.15686274510000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="8"/>
+                                <connections>
+                                    <action selector="touchDigit:" destination="fdF-I7-aVm" eventType="touchUpInside" id="8by-De-dkC"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RCq-WD-f9a">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <color key="backgroundColor" red="0.24985123134124188" green="0.2691856262888464" blue="0.33608950792051284" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="27"/>
+                                <color key="tintColor" red="0.1176470588" green="0.12549019610000001" blue="0.15686274510000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="6"/>
+                                <connections>
+                                    <action selector="touchDigit:" destination="fdF-I7-aVm" eventType="touchUpInside" id="c2y-zM-inl"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hAm-VC-KM4">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <color key="backgroundColor" red="0.24985123134124188" green="0.2691856262888464" blue="0.33608950792051284" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="27"/>
+                                <color key="tintColor" red="0.1176470588" green="0.12549019610000001" blue="0.15686274510000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="0"/>
+                                <connections>
+                                    <action selector="touchDigit:" destination="fdF-I7-aVm" eventType="touchUpInside" id="kB7-ew-hoJ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pQm-pY-uZZ">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="49"/>
+                                <color key="tintColor" red="0.0" green="0.62745098040000002" blue="0.74509803919999995" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="+"/>
+                                <connections>
+                                    <action selector="operatorPressed:" destination="fdF-I7-aVm" eventType="touchUpInside" id="pGC-WP-j6M"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="whL-nd-TCU">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="49"/>
+                                <color key="tintColor" red="0.0" green="0.62745098040000002" blue="0.74509803919999995" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="−"/>
+                                <connections>
+                                    <action selector="operatorPressed:" destination="fdF-I7-aVm" eventType="touchUpInside" id="8EW-kl-Gcq"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DiL-qT-QeV">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <color key="backgroundColor" red="0.24985123134124188" green="0.2691856262888464" blue="0.33608950792051284" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="27"/>
+                                <color key="tintColor" red="0.1176470588" green="0.12549019610000001" blue="0.15686274510000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="CE"/>
+                                <connections>
+                                    <action selector="touchDigit:" destination="fdF-I7-aVm" eventType="touchUpInside" id="v35-HO-UJK"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fIE-fm-u6p">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="49"/>
+                                <color key="tintColor" red="0.0" green="0.62745098040000002" blue="0.74509803919999995" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="="/>
+                                <connections>
+                                    <action selector="equalsPressed:" destination="fdF-I7-aVm" eventType="touchUpInside" id="1Ka-2m-Gn2"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="whB-Op-mrx">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" image="ic_check_circle_white_48pt">
+                                    <color key="titleShadowColor" red="0.30588235289999999" green="0.68235294120000001" blue="0.72156862749999995" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uzD-Ct-mQD">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <color key="backgroundColor" red="0.24985123134124188" green="0.2691856262888464" blue="0.33608950792051284" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="27"/>
+                                <color key="tintColor" red="0.1176470588" green="0.12549019610000001" blue="0.15686274510000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" image="ic_label_white_48pt">
+                                    <color key="titleColor" red="0.30588235289999999" green="0.68235294120000001" blue="0.72156862749999995" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <variation key="heightClass=regular-widthClass=compact"/>
+                                <connections>
+                                    <action selector="dismissCalculator:" destination="fdF-I7-aVm" eventType="touchUpInside" id="SW7-UC-17B"/>
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" red="0.0" green="0.62745098040000002" blue="0.74509803919999995" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.1176470588" green="0.12549019610000001" blue="0.15686274510000001" alpha="1" colorSpace="calibratedRGB"/>
+                        <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstItem="whL-nd-TCU" firstAttribute="trailing" secondItem="U1x-re-mM4" secondAttribute="trailingMargin" id="098-eX-j2c"/>
+                            <constraint firstItem="whL-nd-TCU" firstAttribute="centerY" secondItem="fIE-fm-u6p" secondAttribute="centerY" id="0GF-ET-KTh"/>
+                            <constraint firstItem="moU-jG-ui3" firstAttribute="height" secondItem="hGz-Jq-1sl" secondAttribute="height" id="3ZR-gd-nnR"/>
+                            <constraint firstItem="uzD-Ct-mQD" firstAttribute="top" secondItem="hha-LJ-ZdH" secondAttribute="bottom" constant="1" id="3au-CM-wQj"/>
+                            <constraint firstItem="DiL-qT-QeV" firstAttribute="top" secondItem="iKD-Qw-R6f" secondAttribute="bottom" constant="1" id="3s0-JI-N8W"/>
+                            <constraint firstItem="iKD-Qw-R6f" firstAttribute="top" secondItem="RCq-WD-f9a" secondAttribute="bottom" constant="1" id="4VJ-lu-kPC"/>
+                            <constraint firstItem="PlL-go-me4" firstAttribute="bottom" secondItem="hGz-Jq-1sl" secondAttribute="bottom" id="5Z8-YH-rtF"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="RCq-WD-f9a" secondAttribute="trailing" constant="-20" id="65R-Ta-aAk"/>
+                            <constraint firstItem="hAm-VC-KM4" firstAttribute="top" secondItem="xUk-9G-Jd6" secondAttribute="bottom" constant="1" id="6IJ-8v-6cb"/>
+                            <constraint firstItem="DiL-qT-QeV" firstAttribute="height" secondItem="hGz-Jq-1sl" secondAttribute="height" id="7q6-JY-NGg"/>
+                            <constraint firstItem="hha-LJ-ZdH" firstAttribute="top" secondItem="moU-jG-ui3" secondAttribute="bottom" constant="1" id="8s9-2S-awu"/>
+                            <constraint firstItem="Q4W-21-hBi" firstAttribute="bottom" secondItem="hGz-Jq-1sl" secondAttribute="bottom" id="9SY-bl-OpW"/>
+                            <constraint firstItem="8a7-KS-bgM" firstAttribute="bottom" secondItem="hGz-Jq-1sl" secondAttribute="bottom" id="A4q-61-2og"/>
+                            <constraint firstItem="g5g-Kx-Jz6" firstAttribute="leading" secondItem="U1x-re-mM4" secondAttribute="leadingMargin" constant="-20" id="Atb-Y5-VMU"/>
+                            <constraint firstItem="RCq-WD-f9a" firstAttribute="top" secondItem="8a7-KS-bgM" secondAttribute="bottom" constant="1" id="DsM-im-O5K"/>
+                            <constraint firstItem="xUk-9G-Jd6" firstAttribute="centerX" secondItem="U1x-re-mM4" secondAttribute="centerX" id="FV6-Cw-sMg"/>
+                            <constraint firstItem="RCq-WD-f9a" firstAttribute="bottom" secondItem="hGz-Jq-1sl" secondAttribute="bottom" id="FXv-Jr-6Ec"/>
+                            <constraint firstItem="Q4W-21-hBi" firstAttribute="height" secondItem="hGz-Jq-1sl" secondAttribute="height" id="GkG-lW-qYv"/>
+                            <constraint firstItem="pQm-pY-uZZ" firstAttribute="centerY" secondItem="fIE-fm-u6p" secondAttribute="centerY" id="Guo-Ag-Kpj"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="DiL-qT-QeV" secondAttribute="trailing" constant="-20" id="IN8-xN-l8S"/>
+                            <constraint firstItem="hAm-VC-KM4" firstAttribute="width" secondItem="hGz-Jq-1sl" secondAttribute="width" id="IQc-RF-fD0"/>
+                            <constraint firstItem="Q4W-21-hBi" firstAttribute="top" secondItem="PlL-go-me4" secondAttribute="bottom" constant="1" id="J0j-i1-64u"/>
+                            <constraint firstItem="PlL-go-me4" firstAttribute="top" secondItem="whB-Op-mrx" secondAttribute="bottom" constant="20" id="J1w-ld-hXy"/>
+                            <constraint firstItem="hGz-Jq-1sl" firstAttribute="leading" secondItem="U1x-re-mM4" secondAttribute="leadingMargin" constant="-20" id="LOM-Zm-NsI"/>
+                            <constraint firstItem="iKD-Qw-R6f" firstAttribute="top" secondItem="RCq-WD-f9a" secondAttribute="bottom" constant="1" id="Lty-ie-4K6"/>
+                            <constraint firstItem="6zp-fg-nAd" firstAttribute="top" secondItem="uzD-Ct-mQD" secondAttribute="bottom" constant="1" id="Mqo-Sg-Hao"/>
+                            <constraint firstItem="6zp-fg-nAd" firstAttribute="top" secondItem="hAm-VC-KM4" secondAttribute="bottom" constant="1" id="NPd-us-t30"/>
+                            <constraint firstItem="hha-LJ-ZdH" firstAttribute="width" secondItem="hGz-Jq-1sl" secondAttribute="width" id="O2u-fv-q5Z"/>
+                            <constraint firstItem="DiL-qT-QeV" firstAttribute="top" secondItem="iKD-Qw-R6f" secondAttribute="bottom" constant="1" id="ONN-AO-wnT"/>
+                            <constraint firstItem="xUk-9G-Jd6" firstAttribute="bottom" secondItem="hGz-Jq-1sl" secondAttribute="bottom" id="OQC-qH-Or3"/>
+                            <constraint firstItem="moU-jG-ui3" firstAttribute="width" secondItem="hGz-Jq-1sl" secondAttribute="width" id="OhW-zx-OZu"/>
+                            <constraint firstItem="PlL-go-me4" firstAttribute="centerX" secondItem="U1x-re-mM4" secondAttribute="centerX" id="Oi5-BJ-6ab"/>
+                            <constraint firstItem="PlL-go-me4" firstAttribute="leading" secondItem="hGz-Jq-1sl" secondAttribute="trailing" constant="1" id="PBM-oU-0iM"/>
+                            <constraint firstItem="Q4W-21-hBi" firstAttribute="width" secondItem="hGz-Jq-1sl" secondAttribute="width" id="QfJ-wy-fWn"/>
+                            <constraint firstItem="xUk-9G-Jd6" firstAttribute="top" secondItem="Q4W-21-hBi" secondAttribute="bottom" constant="1" id="R5G-5m-A4j"/>
+                            <constraint firstItem="fIE-fm-u6p" firstAttribute="leading" secondItem="U1x-re-mM4" secondAttribute="leadingMargin" id="R8y-GY-Gqr"/>
+                            <constraint firstItem="RCq-WD-f9a" firstAttribute="top" secondItem="8a7-KS-bgM" secondAttribute="bottom" constant="1" id="Sz5-9a-9Vg"/>
+                            <constraint firstItem="iKD-Qw-R6f" firstAttribute="bottom" secondItem="hGz-Jq-1sl" secondAttribute="bottom" id="TLq-n9-X9v"/>
+                            <constraint firstItem="moU-jG-ui3" firstAttribute="top" secondItem="hGz-Jq-1sl" secondAttribute="bottom" constant="1" id="UBF-yX-CKm"/>
+                            <constraint firstItem="moU-jG-ui3" firstAttribute="leading" secondItem="U1x-re-mM4" secondAttribute="leadingMargin" constant="-20" id="UpD-MC-fNz"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="8a7-KS-bgM" secondAttribute="trailing" constant="-20" id="V7B-0L-u9L"/>
+                            <constraint firstItem="pQm-pY-uZZ" firstAttribute="centerX" secondItem="U1x-re-mM4" secondAttribute="centerX" id="Vh8-EV-nUs"/>
+                            <constraint firstItem="DiL-qT-QeV" firstAttribute="width" secondItem="hGz-Jq-1sl" secondAttribute="width" id="XDY-WY-F40"/>
+                            <constraint firstItem="PlL-go-me4" firstAttribute="height" secondItem="hGz-Jq-1sl" secondAttribute="height" id="Xaf-QN-bAc"/>
+                            <constraint firstItem="g5g-Kx-Jz6" firstAttribute="top" secondItem="SvN-k6-vDH" secondAttribute="bottom" id="XhH-71-tai"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="iKD-Qw-R6f" secondAttribute="trailing" constant="-20" id="YE3-fj-30w"/>
+                            <constraint firstItem="PlL-go-me4" firstAttribute="width" secondItem="hGz-Jq-1sl" secondAttribute="width" id="aPm-BU-PEB"/>
+                            <constraint firstItem="hAm-VC-KM4" firstAttribute="height" secondItem="hGz-Jq-1sl" secondAttribute="height" id="fIJ-TT-7PT"/>
+                            <constraint firstItem="hAm-VC-KM4" firstAttribute="centerX" secondItem="U1x-re-mM4" secondAttribute="centerX" id="hcH-kD-WQE"/>
+                            <constraint firstItem="xUk-9G-Jd6" firstAttribute="height" secondItem="hGz-Jq-1sl" secondAttribute="height" id="hdx-Ub-ZHQ"/>
+                            <constraint firstItem="iKD-Qw-R6f" firstAttribute="height" secondItem="hGz-Jq-1sl" secondAttribute="height" id="i7K-2R-n5v"/>
+                            <constraint firstItem="iKD-Qw-R6f" firstAttribute="leading" secondItem="xUk-9G-Jd6" secondAttribute="trailing" constant="1" id="i8M-rS-4Sd"/>
+                            <constraint firstItem="pQm-pY-uZZ" firstAttribute="top" secondItem="g5g-Kx-Jz6" secondAttribute="bottom" constant="50" id="iEF-xK-wgg"/>
+                            <constraint firstItem="moU-jG-ui3" firstAttribute="bottom" secondItem="hGz-Jq-1sl" secondAttribute="bottom" id="jJd-Gf-5qC"/>
+                            <constraint firstItem="hha-LJ-ZdH" firstAttribute="height" secondItem="hGz-Jq-1sl" secondAttribute="height" id="jXj-En-EZJ"/>
+                            <constraint firstItem="Q4W-21-hBi" firstAttribute="leading" secondItem="moU-jG-ui3" secondAttribute="trailing" constant="1" id="lr5-DT-orS"/>
+                            <constraint firstItem="iKD-Qw-R6f" firstAttribute="width" secondItem="hGz-Jq-1sl" secondAttribute="width" id="mZ5-Ud-mLz"/>
+                            <constraint firstItem="RCq-WD-f9a" firstAttribute="width" secondItem="hGz-Jq-1sl" secondAttribute="width" id="mip-ho-K8k"/>
+                            <constraint firstItem="RCq-WD-f9a" firstAttribute="height" secondItem="hGz-Jq-1sl" secondAttribute="height" id="n54-2T-kHg"/>
+                            <constraint firstItem="uzD-Ct-mQD" firstAttribute="height" secondItem="hGz-Jq-1sl" secondAttribute="height" id="nVP-A7-7Co"/>
+                            <constraint firstItem="hha-LJ-ZdH" firstAttribute="leading" secondItem="U1x-re-mM4" secondAttribute="leadingMargin" constant="-20" id="r4v-NY-kKR"/>
+                            <constraint firstItem="hha-LJ-ZdH" firstAttribute="bottom" secondItem="hGz-Jq-1sl" secondAttribute="bottom" id="rfG-6E-Mwa"/>
+                            <constraint firstItem="uzD-Ct-mQD" firstAttribute="leading" secondItem="U1x-re-mM4" secondAttribute="leadingMargin" constant="-20" id="slp-hV-BsD"/>
+                            <constraint firstItem="8a7-KS-bgM" firstAttribute="leading" secondItem="PlL-go-me4" secondAttribute="trailing" constant="1" id="tGk-sH-D9P"/>
+                            <constraint firstItem="RCq-WD-f9a" firstAttribute="leading" secondItem="Q4W-21-hBi" secondAttribute="trailing" constant="1" id="tsd-ou-GRI"/>
+                            <constraint firstItem="6zp-fg-nAd" firstAttribute="top" secondItem="DiL-qT-QeV" secondAttribute="bottom" constant="1" id="vqc-l8-CZx"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="g5g-Kx-Jz6" secondAttribute="trailing" constant="-20" id="w3Q-gP-cPL"/>
+                            <constraint firstItem="8a7-KS-bgM" firstAttribute="height" secondItem="hGz-Jq-1sl" secondAttribute="height" id="w7E-MC-l4J"/>
+                            <constraint firstItem="whB-Op-mrx" firstAttribute="centerX" secondItem="U1x-re-mM4" secondAttribute="centerX" id="w7d-Gj-HC4"/>
+                            <constraint firstItem="xUk-9G-Jd6" firstAttribute="width" secondItem="hGz-Jq-1sl" secondAttribute="width" id="wKV-qz-Wov"/>
+                            <constraint firstItem="xUk-9G-Jd6" firstAttribute="leading" secondItem="hha-LJ-ZdH" secondAttribute="trailing" constant="1" id="xX8-oY-nHm"/>
+                            <constraint firstItem="8a7-KS-bgM" firstAttribute="width" secondItem="hGz-Jq-1sl" secondAttribute="width" id="ygL-kQ-kst"/>
+                            <constraint firstItem="Q4W-21-hBi" firstAttribute="centerX" secondItem="U1x-re-mM4" secondAttribute="centerX" id="zTt-kN-JC6"/>
+                            <constraint firstItem="uzD-Ct-mQD" firstAttribute="width" secondItem="hGz-Jq-1sl" secondAttribute="width" id="zpE-pI-OQC"/>
+                        </constraints>
                         <variation key="default">
                             <mask key="subviews">
-                                <exclude reference="Emr-qT-VWB"/>
-                                <exclude reference="N4d-d5-Z1f"/>
-                                <exclude reference="vUG-7b-6v3"/>
-                                <exclude reference="vmX-nw-9EN"/>
-                                <exclude reference="QkA-HU-6Ak"/>
-                                <exclude reference="8Tm-bc-K1a"/>
-                                <exclude reference="I7G-aB-O5q"/>
-                                <exclude reference="KiY-69-JHP"/>
-                                <exclude reference="9Zr-oX-c1j"/>
-                                <exclude reference="JB4-JI-kmV"/>
-                                <exclude reference="0gX-er-k3M"/>
                                 <exclude reference="g5g-Kx-Jz6"/>
-                                <exclude reference="XSh-Sz-0Jb"/>
+                                <exclude reference="moU-jG-ui3"/>
+                                <exclude reference="hha-LJ-ZdH"/>
+                                <exclude reference="iKD-Qw-R6f"/>
+                                <exclude reference="8a7-KS-bgM"/>
+                                <exclude reference="hGz-Jq-1sl"/>
+                                <exclude reference="PlL-go-me4"/>
+                                <exclude reference="Q4W-21-hBi"/>
+                                <exclude reference="xUk-9G-Jd6"/>
+                                <exclude reference="RCq-WD-f9a"/>
+                                <exclude reference="hAm-VC-KM4"/>
+                                <exclude reference="pQm-pY-uZZ"/>
+                                <exclude reference="whL-nd-TCU"/>
+                                <exclude reference="DiL-qT-QeV"/>
+                                <exclude reference="fIE-fm-u6p"/>
+                                <exclude reference="whB-Op-mrx"/>
+                                <exclude reference="uzD-Ct-mQD"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="Atb-Y5-VMU"/>
+                                <exclude reference="XhH-71-tai"/>
+                                <exclude reference="w3Q-gP-cPL"/>
+                                <exclude reference="R8y-GY-Gqr"/>
+                                <exclude reference="Guo-Ag-Kpj"/>
+                                <exclude reference="Vh8-EV-nUs"/>
+                                <exclude reference="iEF-xK-wgg"/>
+                                <exclude reference="098-eX-j2c"/>
+                                <exclude reference="0GF-ET-KTh"/>
+                                <exclude reference="w7d-Gj-HC4"/>
+                                <exclude reference="LOM-Zm-NsI"/>
+                                <exclude reference="5Z8-YH-rtF"/>
+                                <exclude reference="J1w-ld-hXy"/>
+                                <exclude reference="Oi5-BJ-6ab"/>
+                                <exclude reference="PBM-oU-0iM"/>
+                                <exclude reference="Xaf-QN-bAc"/>
+                                <exclude reference="aPm-BU-PEB"/>
+                                <exclude reference="3ZR-gd-nnR"/>
+                                <exclude reference="OhW-zx-OZu"/>
+                                <exclude reference="UBF-yX-CKm"/>
+                                <exclude reference="UpD-MC-fNz"/>
+                                <exclude reference="jJd-Gf-5qC"/>
+                                <exclude reference="A4q-61-2og"/>
+                                <exclude reference="V7B-0L-u9L"/>
+                                <exclude reference="tGk-sH-D9P"/>
+                                <exclude reference="w7E-MC-l4J"/>
+                                <exclude reference="ygL-kQ-kst"/>
+                                <exclude reference="9SY-bl-OpW"/>
+                                <exclude reference="GkG-lW-qYv"/>
+                                <exclude reference="J0j-i1-64u"/>
+                                <exclude reference="QfJ-wy-fWn"/>
+                                <exclude reference="lr5-DT-orS"/>
+                                <exclude reference="zTt-kN-JC6"/>
+                                <exclude reference="8s9-2S-awu"/>
+                                <exclude reference="O2u-fv-q5Z"/>
+                                <exclude reference="jXj-En-EZJ"/>
+                                <exclude reference="r4v-NY-kKR"/>
+                                <exclude reference="rfG-6E-Mwa"/>
+                                <exclude reference="65R-Ta-aAk"/>
+                                <exclude reference="DsM-im-O5K"/>
+                                <exclude reference="FXv-Jr-6Ec"/>
+                                <exclude reference="Sz5-9a-9Vg"/>
+                                <exclude reference="mip-ho-K8k"/>
+                                <exclude reference="n54-2T-kHg"/>
+                                <exclude reference="tsd-ou-GRI"/>
+                                <exclude reference="FV6-Cw-sMg"/>
+                                <exclude reference="OQC-qH-Or3"/>
+                                <exclude reference="R5G-5m-A4j"/>
+                                <exclude reference="hdx-Ub-ZHQ"/>
+                                <exclude reference="wKV-qz-Wov"/>
+                                <exclude reference="xX8-oY-nHm"/>
+                                <exclude reference="3au-CM-wQj"/>
+                                <exclude reference="nVP-A7-7Co"/>
+                                <exclude reference="slp-hV-BsD"/>
+                                <exclude reference="zpE-pI-OQC"/>
+                                <exclude reference="4VJ-lu-kPC"/>
+                                <exclude reference="Lty-ie-4K6"/>
+                                <exclude reference="TLq-n9-X9v"/>
+                                <exclude reference="YE3-fj-30w"/>
+                                <exclude reference="i7K-2R-n5v"/>
+                                <exclude reference="i8M-rS-4Sd"/>
+                                <exclude reference="mZ5-Ud-mLz"/>
+                                <exclude reference="6IJ-8v-6cb"/>
+                                <exclude reference="IQc-RF-fD0"/>
+                                <exclude reference="fIJ-TT-7PT"/>
+                                <exclude reference="hcH-kD-WQE"/>
+                                <exclude reference="3s0-JI-N8W"/>
+                                <exclude reference="7q6-JY-NGg"/>
+                                <exclude reference="IN8-xN-l8S"/>
+                                <exclude reference="ONN-AO-wnT"/>
+                                <exclude reference="XDY-WY-F40"/>
+                                <exclude reference="Mqo-Sg-Hao"/>
+                                <exclude reference="NPd-us-t30"/>
+                                <exclude reference="vqc-l8-CZx"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=compact">
                             <mask key="subviews">
-                                <include reference="Emr-qT-VWB"/>
-                                <include reference="N4d-d5-Z1f"/>
-                                <include reference="vUG-7b-6v3"/>
-                                <include reference="vmX-nw-9EN"/>
-                                <include reference="QkA-HU-6Ak"/>
-                                <include reference="8Tm-bc-K1a"/>
-                                <include reference="I7G-aB-O5q"/>
-                                <include reference="KiY-69-JHP"/>
-                                <include reference="9Zr-oX-c1j"/>
-                                <include reference="JB4-JI-kmV"/>
-                                <include reference="0gX-er-k3M"/>
                                 <include reference="g5g-Kx-Jz6"/>
-                                <include reference="XSh-Sz-0Jb"/>
+                                <include reference="moU-jG-ui3"/>
+                                <include reference="hha-LJ-ZdH"/>
+                                <include reference="iKD-Qw-R6f"/>
+                                <include reference="8a7-KS-bgM"/>
+                                <include reference="hGz-Jq-1sl"/>
+                                <include reference="PlL-go-me4"/>
+                                <include reference="Q4W-21-hBi"/>
+                                <include reference="xUk-9G-Jd6"/>
+                                <include reference="RCq-WD-f9a"/>
+                                <include reference="hAm-VC-KM4"/>
+                                <include reference="pQm-pY-uZZ"/>
+                                <include reference="whL-nd-TCU"/>
+                                <include reference="DiL-qT-QeV"/>
+                                <include reference="fIE-fm-u6p"/>
+                                <include reference="whB-Op-mrx"/>
+                                <include reference="uzD-Ct-mQD"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="Atb-Y5-VMU"/>
+                                <include reference="XhH-71-tai"/>
+                                <include reference="w3Q-gP-cPL"/>
+                                <include reference="R8y-GY-Gqr"/>
+                                <include reference="Guo-Ag-Kpj"/>
+                                <include reference="Vh8-EV-nUs"/>
+                                <include reference="iEF-xK-wgg"/>
+                                <include reference="098-eX-j2c"/>
+                                <include reference="0GF-ET-KTh"/>
+                                <include reference="w7d-Gj-HC4"/>
+                                <include reference="LOM-Zm-NsI"/>
+                                <exclude reference="5Z8-YH-rtF"/>
+                                <include reference="J1w-ld-hXy"/>
+                                <include reference="Oi5-BJ-6ab"/>
+                                <include reference="PBM-oU-0iM"/>
+                                <include reference="Xaf-QN-bAc"/>
+                                <include reference="aPm-BU-PEB"/>
+                                <include reference="3ZR-gd-nnR"/>
+                                <include reference="OhW-zx-OZu"/>
+                                <include reference="UBF-yX-CKm"/>
+                                <include reference="UpD-MC-fNz"/>
+                                <exclude reference="jJd-Gf-5qC"/>
+                                <exclude reference="A4q-61-2og"/>
+                                <include reference="V7B-0L-u9L"/>
+                                <include reference="tGk-sH-D9P"/>
+                                <include reference="w7E-MC-l4J"/>
+                                <include reference="ygL-kQ-kst"/>
+                                <exclude reference="9SY-bl-OpW"/>
+                                <include reference="GkG-lW-qYv"/>
+                                <include reference="J0j-i1-64u"/>
+                                <include reference="QfJ-wy-fWn"/>
+                                <include reference="lr5-DT-orS"/>
+                                <include reference="zTt-kN-JC6"/>
+                                <include reference="8s9-2S-awu"/>
+                                <include reference="O2u-fv-q5Z"/>
+                                <include reference="jXj-En-EZJ"/>
+                                <include reference="r4v-NY-kKR"/>
+                                <exclude reference="rfG-6E-Mwa"/>
+                                <include reference="65R-Ta-aAk"/>
+                                <include reference="DsM-im-O5K"/>
+                                <exclude reference="FXv-Jr-6Ec"/>
+                                <include reference="Sz5-9a-9Vg"/>
+                                <include reference="mip-ho-K8k"/>
+                                <include reference="n54-2T-kHg"/>
+                                <include reference="tsd-ou-GRI"/>
+                                <include reference="FV6-Cw-sMg"/>
+                                <exclude reference="OQC-qH-Or3"/>
+                                <include reference="R5G-5m-A4j"/>
+                                <include reference="hdx-Ub-ZHQ"/>
+                                <include reference="wKV-qz-Wov"/>
+                                <include reference="xX8-oY-nHm"/>
+                                <include reference="3au-CM-wQj"/>
+                                <include reference="nVP-A7-7Co"/>
+                                <include reference="slp-hV-BsD"/>
+                                <include reference="zpE-pI-OQC"/>
+                                <include reference="4VJ-lu-kPC"/>
+                                <include reference="Lty-ie-4K6"/>
+                                <exclude reference="TLq-n9-X9v"/>
+                                <include reference="YE3-fj-30w"/>
+                                <include reference="i7K-2R-n5v"/>
+                                <include reference="i8M-rS-4Sd"/>
+                                <include reference="mZ5-Ud-mLz"/>
+                                <include reference="6IJ-8v-6cb"/>
+                                <include reference="IQc-RF-fD0"/>
+                                <include reference="fIJ-TT-7PT"/>
+                                <include reference="hcH-kD-WQE"/>
+                                <include reference="3s0-JI-N8W"/>
+                                <include reference="7q6-JY-NGg"/>
+                                <include reference="IN8-xN-l8S"/>
+                                <include reference="ONN-AO-wnT"/>
+                                <include reference="XDY-WY-F40"/>
+                                <include reference="Mqo-Sg-Hao"/>
+                                <include reference="NPd-us-t30"/>
+                                <include reference="vqc-l8-CZx"/>
                             </mask>
                         </variation>
                     </view>
                     <connections>
-                        <outlet property="displayInput" destination="g5g-Kx-Jz6" id="GFv-2h-aGh"/>
-                        <outletCollection property="numberInputCollection" destination="KiY-69-JHP" collectionClass="NSMutableArray" id="Nln-i4-Vly"/>
-                        <outletCollection property="numberInputCollection" destination="vUG-7b-6v3" collectionClass="NSMutableArray" id="lCJ-GY-MNA"/>
-                        <outletCollection property="numberInputCollection" destination="I7G-aB-O5q" collectionClass="NSMutableArray" id="3ci-Vt-W6B"/>
-                        <outletCollection property="numberInputCollection" destination="8Tm-bc-K1a" collectionClass="NSMutableArray" id="ZTN-zO-NoT"/>
-                        <outletCollection property="numberInputCollection" destination="QkA-HU-6Ak" collectionClass="NSMutableArray" id="tMH-Ru-E1n"/>
-                        <outletCollection property="numberInputCollection" destination="Emr-qT-VWB" collectionClass="NSMutableArray" id="4eB-ys-Tgw"/>
-                        <outletCollection property="numberInputCollection" destination="N4d-d5-Z1f" collectionClass="NSMutableArray" id="KRd-4f-wJP"/>
-                        <outletCollection property="numberInputCollection" destination="JB4-JI-kmV" collectionClass="NSMutableArray" id="USA-Gc-0YE"/>
-                        <outletCollection property="numberInputCollection" destination="XSh-Sz-0Jb" collectionClass="NSMutableArray" id="LsC-A7-tfF"/>
-                        <outletCollection property="numberInputCollection" destination="9Zr-oX-c1j" collectionClass="NSMutableArray" id="IXi-Tr-Pc7"/>
+                        <outlet property="calculatorDisplay" destination="g5g-Kx-Jz6" id="WAf-0J-Mad"/>
+                        <outlet property="dismissCalculatorOutlet" destination="uzD-Ct-mQD" id="J1g-Av-2d9"/>
+                        <outlet property="doneButton" destination="whB-Op-mrx" id="k5u-5O-fox"/>
+                        <outletCollection property="buttons" destination="hAm-VC-KM4" collectionClass="NSMutableArray" id="XQC-wa-2df"/>
+                        <outletCollection property="buttons" destination="hGz-Jq-1sl" collectionClass="NSMutableArray" id="MXF-qz-VXp"/>
+                        <outletCollection property="buttons" destination="PlL-go-me4" collectionClass="NSMutableArray" id="rHO-9d-VnK"/>
+                        <outletCollection property="buttons" destination="8a7-KS-bgM" collectionClass="NSMutableArray" id="EfL-Ea-hmf"/>
+                        <outletCollection property="buttons" destination="moU-jG-ui3" collectionClass="NSMutableArray" id="N8S-cL-aYl"/>
+                        <outletCollection property="buttons" destination="Q4W-21-hBi" collectionClass="NSMutableArray" id="il6-SR-0MX"/>
+                        <outletCollection property="buttons" destination="RCq-WD-f9a" collectionClass="NSMutableArray" id="gmJ-tR-AqU"/>
+                        <outletCollection property="buttons" destination="hha-LJ-ZdH" collectionClass="NSMutableArray" id="0Ud-nj-8nn"/>
+                        <outletCollection property="buttons" destination="xUk-9G-Jd6" collectionClass="NSMutableArray" id="5bj-V1-xej"/>
+                        <outletCollection property="buttons" destination="iKD-Qw-R6f" collectionClass="NSMutableArray" id="Fbw-Eu-1P2"/>
+                        <outletCollection property="funcButtons" destination="fIE-fm-u6p" collectionClass="NSMutableArray" id="THt-Fp-O9f"/>
+                        <outletCollection property="funcButtons" destination="pQm-pY-uZZ" collectionClass="NSMutableArray" id="vlf-gr-NXp"/>
+                        <outletCollection property="funcButtons" destination="whL-nd-TCU" collectionClass="NSMutableArray" id="2Ct-6V-3Ca"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Xwd-r0-PAm" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2589" y="167.25"/>
+            <point key="canvasLocation" x="-2550" y="151.5"/>
         </scene>
         <!--Prestige Game Mode Controller-->
         <scene sceneID="2zF-LQ-0Qm">
@@ -320,23 +584,44 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="CarLoop(noBck)" translatesAutoresizingMaskIntoConstraints="NO" id="jKo-ev-i7i">
-                                <rect key="frame" x="115" y="30" width="370" height="283"/>
-                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="// For The Horde" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bgi-OM-DDD">
+                                <rect key="frame" x="-42" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="17"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="87" y="319" width="134" height="23"/>
+                                </variation>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="// For The Horde" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ftH-Dm-ns8">
+                                <rect key="frame" x="-42" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="17"/>
+                                <color key="textColor" red="0.25490196079999999" green="0.71764705880000002" blue="0.2666666667" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="87" y="345" width="134" height="23"/>
+                                </variation>
+                            </label>
                         </subviews>
-                        <color key="backgroundColor" red="0.0" green="0.62745098040000002" blue="0.74509803919999995" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.1176470588" green="0.12549019610000001" blue="0.15686274510000001" alpha="1" colorSpace="calibratedRGB"/>
                         <gestureRecognizers/>
-                        <constraints>
-                            <constraint firstItem="jKo-ev-i7i" firstAttribute="top" secondItem="p16-zu-7rG" secondAttribute="bottom" constant="10" id="Bi5-Pi-e9V"/>
-                            <constraint firstItem="jKo-ev-i7i" firstAttribute="centerX" secondItem="F2Q-lG-Vyg" secondAttribute="centerX" id="sRu-ma-i7v"/>
-                        </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="Bgi-OM-DDD"/>
+                                <exclude reference="ftH-Dm-ns8"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular-widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="Bgi-OM-DDD"/>
+                                <include reference="ftH-Dm-ns8"/>
+                            </mask>
+                        </variation>
                         <connections>
                             <outletCollection property="gestureRecognizers" destination="JOm-eS-7pa" appends="YES" id="Dgy-G2-eFn"/>
+                            <outletCollection property="gestureRecognizers" destination="Ujx-ab-UAW" appends="YES" id="YQn-ed-mhK"/>
                         </connections>
                     </view>
-                    <connections>
-                        <outlet property="challangeTopImageView" destination="jKo-ev-i7i" id="BN5-Qb-31u"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9xU-n8-dEF" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <swipeGestureRecognizer direction="left" id="JOm-eS-7pa">
@@ -344,8 +629,13 @@
                         <action selector="prestigeSwipeLeft:" destination="9At-YY-w0G" id="TMh-Il-kiI"/>
                     </connections>
                 </swipeGestureRecognizer>
+                <tapGestureRecognizer id="Ujx-ab-UAW">
+                    <connections>
+                        <action selector="prestigeTapRecognized:" destination="9At-YY-w0G" id="qhG-9B-YAQ"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="-1486.5" y="151.5"/>
+            <point key="canvasLocation" x="-1638" y="151.5"/>
         </scene>
         <!--Logo Info Controller-->
         <scene sceneID="86P-yJ-1F7">
@@ -417,6 +707,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="CarLoop(noBck)" width="370" height="283"/>
+        <image name="ic_check_circle_white_48pt" width="48" height="48"/>
+        <image name="ic_label_white_48pt" width="48" height="48"/>
     </resources>
 </document>

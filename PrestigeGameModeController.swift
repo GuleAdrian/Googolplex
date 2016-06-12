@@ -36,5 +36,29 @@ class PrestigeGameModeController: UIViewController {
         
     }
 
+    @IBAction func prestigeTapRecognized(sender: UITapGestureRecognizer) {
+        
+        if let calculator = storyboard!.instantiateViewControllerWithIdentifier("CalculatorController") as? CalculatorController {
+            calculator.transitioningDelegate = self
+            presentViewController(calculator, animated: true, completion: nil)
+        }
+        
+    }
    
+}
+
+
+
+
+
+
+
+extension PrestigeGameModeController: UIViewControllerTransitioningDelegate {
+    func animationControllerForDismissedController(dismissed: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+        return DismissFadeAnimator()
+    }
+    
+    func animationControllerForPresentedController(presented: UIViewController, presentingController presenting: UIViewController, sourceController source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+        return PresentFadeAnimator()
+    }
 }
