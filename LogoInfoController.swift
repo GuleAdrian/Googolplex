@@ -16,8 +16,6 @@ class LogoInfoController: UIViewController {
         super.viewDidLoad()
 
         blurBackgroundShowLogoInfo()
-        
-        
     }
 
     override func didReceiveMemoryWarning() {
@@ -35,21 +33,23 @@ class LogoInfoController: UIViewController {
         blurEffectView.alpha = 1.0
         view.addSubview(blurEffectView)
         
-        
-        let infoImage = UIImage(named: "GoogolplexGalaxy")
+
+        let infoImage = UIImage(named: "GoogolplexGalaxyV2")
         highlightedImage = UIImageView(image: infoImage)
         highlightedImage?.frame = self.view.bounds
+            
         self.view.addSubview(highlightedImage!)
-        
+        self.view.bringSubviewToFront(highlightedImage!)
+       
     }
-
+    
+    
     @IBAction func logoInfoHomescreenWasTapped(sender: UITapGestureRecognizer) {
+        
         presentingViewController?.dismissViewControllerAnimated(true, completion: nil)
         removeFromParentViewController()
     }
 }
-
-
 
 
 

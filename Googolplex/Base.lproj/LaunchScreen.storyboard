@@ -2,7 +2,6 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" initialViewController="01J-lp-oVM">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -17,33 +16,18 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="// For The Horde" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="v0s-Gj-P19">
-                                <rect key="frame" x="133" y="289" width="134" height="22.5"/>
-                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="17"/>
-                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="// For The Horde" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jc7-7C-4fv">
-                                <rect key="frame" x="133" y="311.5" width="134" height="22.5"/>
-                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="17"/>
-                                <color key="textColor" red="0.25490196079999999" green="0.71764705880000002" blue="0.2666666667" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Homescreen_v2_Green" translatesAutoresizingMaskIntoConstraints="NO" id="Y8n-6B-Vj2">
+                                <rect key="frame" x="0.0" y="20" width="600" height="580"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="0.1176470588" green="0.12549019610000001" blue="0.15686274510000001" alpha="1" colorSpace="calibratedRGB"/>
                         <gestureRecognizers/>
                         <constraints>
-                            <constraint firstItem="Jc7-7C-4fv" firstAttribute="centerX" secondItem="rH7-ea-wCZ" secondAttribute="centerX" constant="-100" id="Ogo-pG-1q3"/>
-                            <constraint firstItem="v0s-Gj-P19" firstAttribute="centerX" secondItem="rH7-ea-wCZ" secondAttribute="centerX" constant="-100" id="e1E-nC-cp1"/>
-                            <constraint firstItem="Jc7-7C-4fv" firstAttribute="top" secondItem="rH7-ea-wCZ" secondAttribute="topMargin" constant="100" id="fVq-wG-VPf"/>
-                            <constraint firstItem="v0s-Gj-P19" firstAttribute="centerY" secondItem="rH7-ea-wCZ" secondAttribute="centerY" constant="-130" id="kD5-f0-h6W"/>
-                            <constraint firstItem="Jc7-7C-4fv" firstAttribute="top" secondItem="v0s-Gj-P19" secondAttribute="bottom" id="ydo-MD-y96"/>
+                            <constraint firstItem="xb3-aO-Qok" firstAttribute="top" secondItem="Y8n-6B-Vj2" secondAttribute="bottom" id="cot-sI-NqS"/>
+                            <constraint firstAttribute="trailing" secondItem="Y8n-6B-Vj2" secondAttribute="trailing" id="fL3-7X-HLz"/>
+                            <constraint firstItem="Y8n-6B-Vj2" firstAttribute="leading" secondItem="rH7-ea-wCZ" secondAttribute="leading" id="twB-oA-L8e"/>
+                            <constraint firstItem="Y8n-6B-Vj2" firstAttribute="top" secondItem="Llm-lL-Icb" secondAttribute="bottom" id="vWJ-B3-ZDr"/>
                         </constraints>
-                        <variation key="default">
-                            <mask key="constraints">
-                                <exclude reference="fVq-wG-VPf"/>
-                            </mask>
-                        </variation>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -51,4 +35,7 @@
             <point key="canvasLocation" x="27" y="465"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Homescreen_v2_Green" width="414" height="736"/>
+    </resources>
 </document>

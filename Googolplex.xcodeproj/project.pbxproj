@@ -139,9 +139,9 @@
 				3AA1E6951D0868E900CD55A3 /* Transition Animations */,
 				3AD9A7191D06F7BA009BAE18 /* ViewController.swift */,
 				3AA1E6981D08750200CD55A3 /* PrestigeGameModeController.swift */,
-				3AD9A71B1D06F7BA009BAE18 /* Main.storyboard */,
 				3AA1E6901D08495D00CD55A3 /* LogoInfoController.swift */,
 				3AA1E69E1D0ADAAB00CD55A3 /* CalculatorController.swift */,
+				3AD9A71B1D06F7BA009BAE18 /* Main.storyboard */,
 				3AA1E6921D084A5D00CD55A3 /* Extras */,
 			);
 			path = Googolplex;
